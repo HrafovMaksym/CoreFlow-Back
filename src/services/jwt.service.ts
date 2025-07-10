@@ -1,11 +1,12 @@
 import jwt from "jsonwebtoken";
 
 import crypto from "crypto";
+import { User } from "@prisma/client";
 
 const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key";
 
 export const jwtService = {
-  generateToken(user: any): string {
+  generateToken(user: User): string {
     return jwt.sign(
       { id: user.id, email: user.email, name: user.name },
       JWT_SECRET,
