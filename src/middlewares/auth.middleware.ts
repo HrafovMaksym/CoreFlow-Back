@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { jwtService } from "../services/jwt.service";
-import { User } from "@prisma/client";
+
 export const authMiddleware = (
   req: Request,
   res: Response,

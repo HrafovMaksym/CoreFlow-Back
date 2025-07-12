@@ -4,7 +4,6 @@ import { Prisma } from "@prisma/client";
 import { Request, Response } from "express";
 import { prisma } from "../config/prisma.client";
 import { jwtService } from "../services/jwt.service";
-import { get } from "http";
 
 export const authController = {
   async registration(req: Request, res: Response) {
